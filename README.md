@@ -9,6 +9,32 @@ A Flask-based web application that uses machine learning to predict which micro-
 ![Machine Learning](https://img.shields.io/badge/machine-learning-yellow)
 ![Status](https://img.shields.io/badge/status-active-success)
 
+---
+
+## 🔗 Live Demo
+👉 [Try HabitPredict here](https://habit-predictor-daily-micro-habit-p-eight.vercel.app/)
+
+---
+
+## 📸 Screenshots
+
+### Dashboard View
+![Dashboard Screenshot](assets/screenshot-dashboard.png)
+
+### Add Habit Form
+![Add Habit Screenshot](assets/screenshot-add-habit.png)
+
+*(Replace these with your own screenshots/GIFs inside the `assets/` folder)*
+
+---
+
+## 🎥 Demo
+![Demo GIF](assets/demo.gif)
+
+*(Record a short screen capture of adding/completing a habit and place it here)*
+
+---
+
 ## 🚀 Features
 
 - **AI-Powered Predictions**: TensorFlow LSTM model predicts habit skip probability
@@ -287,3 +313,4 @@ This project is actively maintained. Current version: 1.0.0
 <div align="center">
 Made with ❤️ and Python
 </div>
+
