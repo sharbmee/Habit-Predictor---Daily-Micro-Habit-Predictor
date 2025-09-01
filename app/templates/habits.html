@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitPredict - Habits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-indigo-600 text-white shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        
+        <!-- Logo & Brand -->
+        <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-xl font-bold">HabitPredict</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex space-x-4">
+            <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-indigo-700">Dashboard</a>
+            <a href="habits.html" class="px-3 py-2 rounded-lg hover:bg-indigo-700">Habits</a>
+            <a href="analytics.html" class="px-3 py-2 rounded-lg hover:bg-indigo-700">Analytics</a>
+            <a href="settings.html" class="px-3 py-2 rounded-lg hover:bg-indigo-700">Settings</a>
+        </div>
+
+        <!-- Profile Section -->
+        <!-- Parent must wrap BOTH avatar and menu -->
+    <div class="relative inline-block profile-container group">
+
+    <!-- Avatar / trigger -->
+    <button
+        type="button"
+        class="h-10 w-10 rounded-full bg-indigo-800 text-white flex items-center justify-center focus:outline-none"
+        aria-haspopup="true">
+            JD
+    </button>
+
+    <!-- Dropdown -->
+    <div
+        class="profile-menu absolute right-0 top-full mt-2 w-48 rounded-lg bg-white text-gray-800 shadow-xl
+            opacity-0 scale-95 pointer-events-none
+            transition transform duration-150 ease-out z-50
+            group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
+            group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:pointer-events-auto">
+        <a href="#" class="block px-4 py-2 hover:bg-indigo-50"><i class="fas fa-user mr-2 w-5"></i> My Profile</a>
+        <a href="settings.html" class="block px-4 py-2 hover:bg-indigo-50"><i class="fas fa-cog mr-2 w-5"></i> Settings</a>
+        <a href="#" class="block px-4 py-2 hover:bg-indigo-50"><i class="fas fa-sign-out-alt mr-2 w-5"></i> Logout</a>
+    </div>
+    </div>
+    </div>
+</nav>
+
+
+    <!-- Habits Content -->
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">My Habits</h1>
+        
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">All Tracked Habits</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="text-left text-gray-600">
+                            <th class="pb-4">Habit</th>
+                            <th class="pb-4">Frequency</th>
+                            <th class="pb-4">Best Time</th>
+                            <th class="pb-4">Skip Risk</th>
+                            <th class="pb-4">Status</th>
+                            <th class="pb-4">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">
+                                        <i class="fas fa-tint"></i>
+                                    </div>
+                                    <span>Drink water</span>
+                                </div>
+                            </td>
+                            <td class="py-4">Daily</td>
+                            <td class="py-4">9:00 AM</td>
+                            <td class="py-4">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Low risk (25%)</span>
+                            </td>
+                            <td class="py-4">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Completed</span>
+                            </td>
+                            <td class="py-4">
+                                <button class="text-indigo-600 hover:text-indigo-800 mr-3"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mr-3">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <span>Read 5 minutes</span>
+                                </div>
+                            </td>
+                            <td class="py-4">Daily</td>
+                            <td class="py-4">8:00 PM</td>
+                            <td class="py-4">
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Medium risk (45%)</span>
+                            </td>
+                            <td class="py-4">
+                                <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Pending</span>
+                            </td>
+                            <td class="py-4">
+                                <button class="text-indigo-600 hover:text-indigo-800 mr-3"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mr-3">
+                                        <i class="fas fa-running"></i>
+                                    </div>
+                                    <span>Stretch</span>
+                                </div>
+                            </td>
+                            <td class="py-4">Daily</td>
+                            <td class="py-4">10:00 AM</td>
+                            <td class="py-4">
+                                <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded-full">High risk (65%)</span>
+                            </td>
+                            <td class="py-4">
+                                <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Pending</span>
+                            </td>
+                            <td class="py-4">
+                                <button class="text-indigo-600 hover:text-indigo-800 mr-3"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center mr-3">
+                                        <i class="fas fa-walking"></i>
+                                    </div>
+                                    <span>Take a 10-minute walk</span>
+                                </极速赛车开奖直播>
+                            </td>
+                            <td class="py-4">Daily</td>
+                            <td class="py-4">12:00 PM</td>
+                            <td class="py-4">
+                                <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Very high risk (85%)</span>
+                            </td>
+                            <td class="py-4">
+                                <span class="px-2极速赛车开奖直播 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Pending</span>
+                            </td>
+                            <td class="py-4">
+                                <button class="text-indigo-600 hover:text-indigo-800 mr-3"><i class="fas fa-edit"></i></button>
+                                <button class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Habit Categories</h2>
+            <div class="grid grid极速赛车开奖直播-cols-1 md:grid-cols-3 gap-6">
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <div class="flex items-center mb-3">
+                        <div class="h-10 w-10 rounded-full bg-blue-极速赛车开奖直播100 text-blue-600 flex items-center justify-center mr-3">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="font-semibold">Health & Wellness</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">3 habits</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <div class="flex items-center mb-3">
+                        <div class="h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mr-3">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h极速赛车开奖直播3 class="font-sem极速赛车开奖直播ibold">Personal Growth</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">1 habit</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <div class="flex items-center mb-3">
+                        <div class="h-10 w-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <h3 class="font-semibold">Add New Category</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Click to create</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 transition-transform duration-300 opacity-0">
+        <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12极速赛车开奖直播l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

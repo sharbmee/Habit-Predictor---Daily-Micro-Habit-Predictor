@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitPredict - Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-indigo-600 text-white shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        
+        <!-- Logo & Brand -->
+        <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-xl font-bold">HabitPredict</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex space-x-4">
+            <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-indigo-700">Dashboard</a>
+            <a href="habits.html" class="px-3 py-2 rounded-lg hover:bg-indigo-700">Habits</a>
+            <a href="analytics.html" class="px-3 py-2 rounded-lg hover:bg-indigo-700">Analytics</a>
+            <a href="settings.html" class="px-3 py-2 rounded-lg hover:bg-indigo-700">Settings</a>
+        </div>
+
+        <!-- Profile Section -->
+        <!-- Parent must wrap BOTH avatar and menu -->
+    <div class="relative inline-block profile-container group">
+
+    <!-- Avatar / trigger -->
+    <button
+        type="button"
+        class="h-10 w-10 rounded-full bg-indigo-800 text-white flex items-center justify-center focus:outline-none"
+        aria-haspopup="true">
+            JD
+    </button>
+
+    <!-- Dropdown -->
+    <div
+        class="profile-menu absolute right-0 top-full mt-2 w-48 rounded-lg bg-white text-gray-800 shadow-xl
+            opacity-0 scale-95 pointer-events-none
+            transition transform duration-150 ease-out z-50
+            group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
+            group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:pointer-events-auto">
+        <a href="#" class="block px-4 py-2 hover:bg-indigo-50"><i class="fas fa-user mr-2 w-5"></i> My Profile</a>
+        <a href="settings.html" class="block px-4 py-2 hover:bg-indigo-50"><i class="fas fa-cog mr-2 w-5"></i> Settings</a>
+        <a href="#" class="block px-4 py-2 hover:bg-indigo-50"><i class="fas fa-sign-out-alt mr-2 w-5"></i> Logout</a>
+    </div>
+    </div>
+    </div>
+</nav>
+
+
+    <!-- Analytics Content -->
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">Analytics & Insights</h1>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Weekly Performance</h2>
+                <div class="h-80">
+                    <canvas id="weeklyChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Habit Distribution</h2>
+                <div class="h-80">
+                    <canvas id="distributionChart"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Performance Insights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center p-4 border border-gray-200 rounded-lg">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">72%</div>
+                    <p class="text-gray-600">Overall Completion Rate</p>
+                </div>
+                
+                <div class="text-center p-4 border border-gray-200 rounded-lg">
+                    <div class="text-4xl font-bold text-green-600 mb-2">5</div>
+                    <p class="text-gray-600">Current Streak Days</p>
+                </div>
+                
+                <div class="text-center p-4 border border-gray-200 rounded-lg">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">12</div>
+                    <p class="text-gray-600">Longest Streak Record</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Skip Pattern Analysis</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Most Frequently Skipped Habits</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>Take a 10-minute walk</span>
+                            <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Skipped 45% of time</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Stretch</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded-full">Skipped 30% of time</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Most Successful Habits</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>Drink water</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Completed 92% of time</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Read 5 minutes</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Completed 78% of time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Analytics-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Weekly Performance Chart
+            const weeklyCtx = document.getElementById('weeklyChart').getContext('2d');
+            new Chart(weeklyCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Completion Rate (%)',
+                        data: [65, 75, 70, 80, 85, 60, 75],
+                        backgroundColor: 'rgba(79, 70, 229, 0.7)',
+                        borderColor: 'rgb(79, 70, 229)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Distribution Chart
+            const distributionCtx = document.getElementById('distributionChart').getContext('2d');
+            new Chart(distributionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Completed', 'Skipped', 'Pending'],
+                    datasets: [{
+                        data: [45, 30, 25],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.7)',
+                            'rgba(239, 68, 68, 0.7)',
+                            'rgba(156, 163, 175, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgb(16, 185, 129)',
+                            'rgb(239, 68, 68)',
+                            'rgb(156, 163, 175)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

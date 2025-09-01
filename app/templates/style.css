@@ -1,0 +1,64 @@
+/* Global Styles for HabitPredict */
+.habit-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.habit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.risk-low { border-left-color: #10B981; }
+.risk-medium { border-left-color: #F59E0B; }
+.risk-high { border-left-color: #F97316; }
+.risk-very-high { border-left-color: #EF4444; }
+.risk-progress-low { background-color: #10B981; }
+.risk-progress-medium { background-color: #F59E0B; }
+.risk-progress-high { background-color: #F97316; }
+.risk-progress-very-high { background-color: #EF4444; }
+.profile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 0.5rem;
+}
+.profile-container:hover .profile-menu {
+            display: block;
+}
+.tab-content {
+            display: none;
+}
+.tab-content.active {
+            display: block;
+}
+
+/* Toast Notification Styles */
+#toast {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Animation for habit completion */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.habit-completed {
+    animation: pulse 0.5s ease-in-out;
+}
