@@ -1,10 +1,3 @@
-Got it ✅ I’ll create a clean **`README.md`** for your habit tracker project. You can tweak the text later depending on how polished you want it to look.
-
-Here’s a solid draft:
-
----
-
-```markdown
 # HabitPredict 🧘‍♂️📊
 
 A simple habit tracking and prediction web app built with **HTML**, **TailwindCSS**, and **Vanilla JavaScript**.  
@@ -22,7 +15,26 @@ It allows users to **add new habits**, track completion, visualize skip risk, an
   - High Risk
   - Very High Risk
 - 🔔 Toast/notification support (customizable).
-- Responsive design using **TailwindCSS**.
+- 📱 Fully responsive UI with **TailwindCSS**.
+
+---
+
+## 📸 Screenshots
+
+### Dashboard View
+![Dashboard Screenshot](assets/screenshot-dashboard.png)
+
+### Add Habit Form
+![Add Habit Screenshot](assets/screenshot-add-habit.png)
+
+*(Replace these with your own screenshots/GIFs inside the `assets/` folder)*
+
+---
+
+## 🎥 Demo
+![Demo GIF](assets/demo.gif)
+
+*(Record a short screen capture of adding/completing a habit and place it here)*
 
 ---
 
@@ -31,11 +43,11 @@ It allows users to **add new habits**, track completion, visualize skip risk, an
 
 habit-predict/
 │
-├── index.html          # Main HTML file
-├── style.css           # (Optional) Custom styles if needed
-├── script.js           # All habit logic (rendering, toggling, adding)
-├── README.md           # Project documentation
-└── assets/             # (Optional) Icons, images
+├── index.html              # Main HTML file
+├── style.css               # (Optional) Custom styles if needed
+├── script.js               # All habit logic (rendering, toggling, adding)
+├── README.md               # Project documentation
+└── assets/                 # Screenshots, GIFs, icons
 
 ````
 
@@ -104,9 +116,4 @@ This project is licensed under the **MIT License** – free to use and modify.
 
 ✨ Built with passion to make habit building easier!
 
-```
-
----
-
-Do you want me to also add **screenshots / demo GIF placeholders** in the README so it looks more professional for GitHub?
 ```
