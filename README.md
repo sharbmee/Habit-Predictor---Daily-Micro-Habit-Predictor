@@ -19,7 +19,7 @@ A Flask-based web application that uses machine learning to predict which micro-
 ## 📸 Screenshots
 
 ### Dashboard View
-![Dashboard Screenshot](Assets(recording+screenshot)/Screenshot of project/Screenshot (27).png)
+Assets(recording+screenshot)/Screenshot of project/Screenshot (27).png
 
 ### Add Habit Form
 ![Add Habit Screenshot](Assets(recording+screenshot)/Screenshot of project/Screenshot (29).png)
@@ -319,5 +319,6 @@ This project is actively maintained. Current version: 1.0.0
 <div align="center">
 Made with ❤️ and Python
 </div>
+
 
 
