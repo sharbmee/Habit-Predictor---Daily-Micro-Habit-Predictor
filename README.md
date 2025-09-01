@@ -19,17 +19,23 @@ A Flask-based web application that uses machine learning to predict which micro-
 ## 📸 Screenshots
 
 ### Dashboard View
-![Dashboard Screenshot](assets/screenshot-dashboard.png)
+![Dashboard Screenshot](Assets(recording+screenshot)/Screenshot of project/Screenshot (27).png)
 
 ### Add Habit Form
-![Add Habit Screenshot](assets/screenshot-add-habit.png)
+![Add Habit Screenshot](Assets(recording+screenshot)/Screenshot of project/Screenshot (29).png)
+
+### Analytics & Insight
+![Add Habit Screenshot](Assets(recording+screenshot)/Screenshot of project/Screenshot (30).png)
+
+### Settings
+![Add Habit Screenshot](Assets(recording+screenshot)/Screenshot of project/Screenshot (31).png)
 
 *(Replace these with your own screenshots/GIFs inside the `assets/` folder)*
 
 ---
 
 ## 🎥 Demo
-![Demo GIF](assets/demo.gif)
+![Demo GIF](Assets(recording+screenshot)/Project Screen Recording/HabitPredict - Analytics - Google Chrome 2025-09-01 12-13-20.mp4)
 
 *(Record a short screen capture of adding/completing a habit and place it here)*
 
@@ -313,4 +319,5 @@ This project is actively maintained. Current version: 1.0.0
 <div align="center">
 Made with ❤️ and Python
 </div>
+
 
